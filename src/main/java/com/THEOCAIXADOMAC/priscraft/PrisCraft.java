@@ -1,5 +1,6 @@
-package com.THEOCAIXADOMAC.modid;
+package com.THEOCAIXADOMAC.priscraft;
 
+import com.THEOCAIXADOMAC.priscraft.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,6 +22,8 @@ public class PrisCraft {
 
     public PrisCraft() { //tiamo
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
